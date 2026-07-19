@@ -5,11 +5,8 @@ s3 = boto3.client("s3")
 
 BUCKET_NAME = "YOUR_BUCKET_NAME"
 
-# Testing
-AGE_THRESHOLD = timedelta(minutes=2)
-
 # Production
-# AGE_THRESHOLD = timedelta(days=30)
+AGE_THRESHOLD = timedelta(days=30)
 
 def lambda_handler(event, context):
     now = datetime.now(timezone.utc)
